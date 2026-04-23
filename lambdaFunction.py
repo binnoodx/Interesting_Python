@@ -28,3 +28,17 @@ print("\nThe Factorial of 5 using normal function is ", fact(5))
 lambda_fact = lambda num:1 if num == 1 or num == 0 else num*lambda_fact(num-1)
 print("\nThe Factorial of 5 using lambda function is ", lambda_fact(5))
 
+
+#Lambda function in map() and filter()
+
+my_list = [1,3,5,6,8]
+
+
+map_lambda = list(map(lambda num :num * num , my_list ))
+# It makes list of those numbers of square of those which are mapped on original list
+print("\nThe New list of squared number is" , map_lambda)
+
+filter_lambda = list(filter(lambda num : num%2!=0 , my_list))
+# It make new list filtering out those number which are odd only
+print("\nThe New list of only odd numbers is " , filter_lambda)
+print("\n")
